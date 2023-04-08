@@ -1,3 +1,4 @@
+import ProductDetails from './components/ProductDetails'
 import ProductItem from './components/ProductItem'
 import Products from './components/Products'
 import {
@@ -5,10 +6,10 @@ import {
   IProductAttributes,
   IProductsRes,
 } from './product.interfaces'
-import { getProducts } from './product.services'
+import { getProducts, getSingleProduct } from './product.services'
 
-export { Products, ProductItem }
+export { Products, ProductItem, ProductDetails }
 
 export type { IProduct, IProductAttributes, IProductsRes }
 
-export { getProducts }
+export { getProducts, getSingleProduct }

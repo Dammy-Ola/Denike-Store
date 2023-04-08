@@ -36,13 +36,15 @@ const ProductItem: FC<{ product: IProduct }> = ({
 
   return (
     <div className="bg-white hover:shadow-2xl relative rounded-md">
-      <Image
-        alt="tt"
-        src={featuredImage ? featuredImage.data.attributes.url : ''}
-        width={200}
-        height={200}
-        className="mx-auto w-full rounded-tl-md rounded-tr-md"
-      />
+      <Link href={`/products/${slug}`}>
+        <Image
+          alt="tt"
+          src={featuredImage ? featuredImage.data.attributes.url : ''}
+          width={200}
+          height={200}
+          className="mx-auto w-full rounded-tl-md rounded-tr-md"
+        />
+      </Link>
       <div className="p-3 pb-7">
         <Link href={`/products/${slug}`} className="hover:underline">
           {name}
