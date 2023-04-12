@@ -1,6 +1,7 @@
 import { IProductsRes, Products, getProducts } from '@/features/product'
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link'
 
 const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
   productsRes,
@@ -26,6 +27,7 @@ const HomePage: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <section className="container">
           <Products productsRes={productsRes} />
         </section>
+        <Link href={'/cart'}>Cart</Link>
       </main>
     </>
   )
